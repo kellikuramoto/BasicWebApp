@@ -11,6 +11,12 @@ public class QueryProcessor {
         if (query.toLowerCase().contains("name")) {
             return "MyTeam";
         }
+
+        if (query.contains("Big Hero")) {
+            return "With all the heart and humor audiences expect from Walt Disney Animation Studios" + 
+            "“Big Hero 6” is an action-packed comedy adventure that introduces Baymax, a lovable, personal companion robot, who forms a special bond with robotics prodigy Hiro Hamada.";
+        }
+
         return "";
     }
 }
