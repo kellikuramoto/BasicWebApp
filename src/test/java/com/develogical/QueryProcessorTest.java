@@ -30,10 +30,10 @@ public class QueryProcessorTest {
         assertThat(queryProcessor.process("shakespeare"), containsString("playwright"));
     }
 
-    // @Test
-    // public void isCaseSensitive() throws Exception {
-    //     assertThat(queryProcessor.process("big hero"), is(""));
-    // }
+    @Test
+    public void isCaseSensitive() throws Exception {
+        assertThat(queryProcessor.process("big hero"), is(""));
+    }
     
 
     @Test
