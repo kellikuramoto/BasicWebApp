@@ -36,14 +36,19 @@ public class QueryProcessorTest {
     }
 
     @Test
+    public void splitQuery() {
+        assertThat(queryProcessor.process("Which of the following numbers is the largest: 2020, 2021"), is("2021"));
+    }
+
+    @Test
     public void isCaseSensitive() throws Exception {
         assertThat(queryProcessor.process("big hero"), is(""));
     }
     
 
-    @Test
-    public void knowsTeamName() throws Exception {
-        assertThat(queryProcessor.process("what is your name"), containsString("MyTeam"));
-    }
+    // @Test
+    // public void knowsTeamName() throws Exception {
+    //     assertThat(queryProcessor.process("what is your name"), containsString("MyTeam"));
+    // }
 
 }
