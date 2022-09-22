@@ -33,6 +33,22 @@ public class QueryProcessor {
             return maxString;
         }
 
+        if (query.toLowerCase().contains("plus")) {
+            String[] response = query.split("is");
+            String numbers = response[1];
+
+            String[] nums = numbers.split("plus");
+            String firstNum = nums[0].trim();
+            String secondNum = nums[1].trim();
+
+            int first = Integer.parseInt(firstNum);
+            int second = Integer.parseInt(secondNum);
+            
+            int sum = first + second;
+
+            return String.valueOf(sum);
+        }
+
         if (query.contains("Big Hero")) {
             return "With all the heart and humor audiences expect from Walt Disney Animation Studios" + 
             "“Big Hero 6” is an action-packed comedy adventure that introduces Baymax, a lovable, personal companion robot, who forms a special bond with robotics prodigy Hiro Hamada.";

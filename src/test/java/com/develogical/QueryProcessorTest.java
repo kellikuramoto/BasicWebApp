@@ -36,8 +36,13 @@ public class QueryProcessorTest {
     }
 
     @Test
-    public void splitQuery() {
+    public void largestNum() {
         assertThat(queryProcessor.process("Which of the following numbers is the largest: 2020, 2021"), is("2021"));
+    }
+
+    @Test
+    public void sum() {
+        assertThat(queryProcessor.process("What is 2 plus 2"), is("4"));
     }
 
     @Test
